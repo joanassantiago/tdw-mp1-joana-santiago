@@ -5,7 +5,9 @@
     "build": "next build",
     "start": "next start",
     "setup": "node --env-file-if-exists=.env.local ./lib/setup.js",
-    "lint": "npx eslint . "
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.17.1",
