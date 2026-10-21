@@ -18,7 +18,7 @@ jobs:
           path: node_modules
           key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci
+        run: npm ci --force
 
   lint:
     needs: install
