@@ -3,6 +3,12 @@ name: CI
 on:
   push:
   pull_request:
+  repository_dispatch:
+    types: [contentful-publish]
+  schedule:
+    - cron: "0 0 * * *"
+      timezone: "Europe/Lisbon"
+  workflow_dispatch:
 
 jobs:
   install:
